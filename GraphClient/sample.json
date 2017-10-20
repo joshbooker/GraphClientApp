@@ -1,0 +1,11 @@
+{
+    "method": "sendMail",
+    "subject": "TEST SUBJECT",
+    "bodyContentType": "Text",
+    "bodyContent": "TEST EMAIL BODY",
+    "toRecipientEmails": ["josh@joshbooker.com","josh@joshuabooker.com"],
+    "ccRecipientEmails": [],
+    "bccRecipientEmails": [],
+    "saveToSentItems": true,
+    "fromUserId": "amanda@joshuabooker.com"
+}

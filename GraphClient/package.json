@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "SendMail-Node",
+  "private": true,
+  "dependencies": {
+    "adal-node": "^0.1.22",
+    "node-fetch": "^1.7.3"
+  }
+}

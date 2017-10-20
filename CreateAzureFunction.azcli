@@ -1,0 +1,19 @@
+# TO EXECUTE, RIGHT CLICK ON A LINE BELOW AND CHOOSE 'RUN LINE IN TERMINAL'
+# Create resource group
+az group create --name FunctionResourceGroup --location eastus
+
+# Create an azure storage account
+az storage account create --name functionstorageaccount2 --location eastus --resource-group FunctionResourceGroup --sku Standard_LRS
+
+# Create Function App
+az functionapp create --name GraphClientApp --storage-account functionstorageaccount2 --consumption-plan-location eastus --resource-group FunctionResourceGroup
+
+func azure functionapp publish GraphClientApp --publish-local-settings -i --overwrite-settings -y
+
+curl -uri https://api.github.com/joshbooker/repos -d "{'name': 'GrapClientApp2'}""
+git
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/joshbooker/GraphClientApp.git
+git push -u origin master
